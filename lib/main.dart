@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quiz/gradient_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,15 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.deepPurple,
         body: Column(
           children: [
-            GradientContainer(
-              colors: [
-                Colors.purple,
-                Colors.deepPurple,
-              ],
+            Image.asset(
+              'assets/images/quiz-logo.png',
             ),
           ],
         ),
