@@ -18,7 +18,11 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            const TextStyled()
+            const TextStyled(),
+            const SizedBox(
+              height: 20,
+            ),
+            const StartQuizButton(),
           ],
         ),
       ),
@@ -39,6 +43,23 @@ class TextStyled extends StatelessWidget {
         color: Colors.white,
         fontSize: 18,
       ),
+    );
+  }
+}
+
+class StartQuizButton extends StatelessWidget {
+  const StartQuizButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.deepPurple,
+      ),
+      onPressed: () {},
+      child: const Text('Start Quiz'),
     );
   }
 }
