@@ -10,8 +10,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 83, 28, 179),
+                Color.fromARGB(255, 55, 3, 139),
+              ],
+            ),
+          ),
+          child: const HomePage(),
+        ),
+      ),
     );
   }
 }
