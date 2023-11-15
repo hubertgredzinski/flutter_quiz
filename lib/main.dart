@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
                 Color.fromARGB(255, 83, 28, 179),
                 Color.fromARGB(255, 55, 3, 139),
               ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
           child: const HomePage(),
