@@ -51,12 +51,17 @@ class StartQuizButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
+    return OutlinedButton.icon(
       style: OutlinedButton.styleFrom(
         foregroundColor: Colors.white,
       ),
+      label: const Text(
+        'Start Quiz',
+      ),
+      icon: const Icon(
+        Icons.start_sharp,
+      ),
       onPressed: () {},
-      child: const Text('Start Quiz'),
     );
   }
 }
