@@ -13,6 +13,7 @@ class _QuestionsScreenPageState extends State<QuestionsScreenPage> {
     return SizedBox(
       width: double.infinity,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text('question'),
           const SizedBox(
