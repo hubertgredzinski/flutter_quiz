@@ -28,21 +28,13 @@ class _QuestionsScreenPageState extends State<QuestionsScreenPage> {
           const SizedBox(
             height: 30,
           ),
-          AnswerButton(
-            currentQuestion.answers[0],
-            onTap: () {},
-          ),
-          AnswerButton(
-            currentQuestion.answers[1],
-            onTap: () {},
-          ),
-          AnswerButton(
-            currentQuestion.answers[2],
-            onTap: () {},
-          ),
-          AnswerButton(
-            currentQuestion.answers[3],
-            onTap: () {},
+          ...currentQuestion.answers.map(
+            (answer) {
+              return AnswerButton(
+                answer,
+                onTap: () {},
+              );
+            },
           ),
         ],
       ),
