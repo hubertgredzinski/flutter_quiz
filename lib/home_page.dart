@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage(this.startQuiz, {super.key});
@@ -27,10 +28,16 @@ class HomePage extends StatelessWidget {
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
-            label: const Text(
+            label: Text(
+              style: GoogleFonts.lato(
+                color: const Color.fromARGB(150, 255, 255, 255),
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
               'Start Quiz',
             ),
             icon: const Icon(
+              color: Color.fromARGB(150, 255, 255, 255),
               Icons.start_sharp,
             ),
             onPressed: () {
@@ -50,11 +57,12 @@ class TextStyled extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       'Learn Flutter the fun way!',
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 18,
+      style: GoogleFonts.lato(
+        color: const Color.fromARGB(150, 255, 255, 255),
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
