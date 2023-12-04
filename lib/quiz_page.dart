@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_quiz/data/questions.dart';
 import 'package:flutter_quiz/home_page.dart';
 import 'package:flutter_quiz/questions_screen_page.dart';
+import 'package:flutter_quiz/results_screen.dart';
 
 class QuizPage extends StatefulWidget {
   const QuizPage({super.key});
@@ -28,7 +29,7 @@ class _QuizState extends State<QuizPage> {
     if (selectedAnswers.length == questions.length) {
       setState(() {
         selectedAnswers = [];
-        activeScreen = 'start-screen';
+        activeScreen = 'results-screen';
       });
     }
   }
@@ -41,6 +42,10 @@ class _QuizState extends State<QuizPage> {
       screenWidget = QuestionsScreenPage(
         onSelectAnswer: chooseAnswer,
       );
+    }
+
+    if (activeScreen == 'results-screen') {
+      screenWidget = const ResultScreenPage();
     }
 
     return MaterialApp(
