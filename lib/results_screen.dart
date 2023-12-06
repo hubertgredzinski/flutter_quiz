@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/data/questions.dart';
+import 'package:flutter_quiz/questions_summary.dart';
 
 class ResultScreenPage extends StatelessWidget {
   const ResultScreenPage({super.key, required this.chosenAnswers});
@@ -35,7 +36,7 @@ class ResultScreenPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text('List of answers and questions'),
+            QuestionSummary(getSummaryData()),
             const SizedBox(
               height: 30,
             ),
