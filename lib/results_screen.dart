@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/data/questions.dart';
 import 'package:flutter_quiz/questions_summary.dart';
+import 'package:flutter_quiz/quiz_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreenPage extends StatelessWidget {
   const ResultScreenPage({super.key, required this.chosenAnswers});
@@ -41,7 +43,12 @@ class ResultScreenPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Your answered $numCorrectQuestions out of $numTotalQuestions questions correctly',
+              'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+              style: GoogleFonts.lato(
+                  color: const Color.fromARGB(255, 239, 159, 255),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 30,
@@ -52,10 +59,28 @@ class ResultScreenPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Restart Quiz'),
-            )
+            TextButton.icon(
+              label: Text(
+                style: GoogleFonts.lato(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                'Restart Quiz!',
+              ),
+              icon: const Icon(
+                color: Colors.white,
+                Icons.refresh,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const QuizPage(),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
